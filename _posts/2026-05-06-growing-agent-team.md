@@ -1,192 +1,204 @@
 ---
 layout: post
-title: "一人公司最重要的是打造一个不断成长的 Agent 团队"
+title: "The Most Important Thing for a One-Person Company Is a Growing Agent Team"
 date: 2026-05-06
 categories: [AI, Agent, Workflow]
 ---
 
-> 当同事不再只是人，而是一组可以被训练、协作和迭代的 Agent，一人公司真正要搭建的就不只是产品原型，而是一套能持续把想法落地的 AI 工作流。
+> When colleagues are no longer only humans, but a group of agents that can be trained, coordinated, and improved, a one-person company needs more than a product prototype. It needs an AI workflow that can keep turning ideas into real outcomes.
 
 ![cover](/assets/images/agent-company-workflow-cover.png)
 
-> 给老朋友的一点说明：这个公众号最近会有一次主题调整。之前我们更多围绕一个开源视频剪辑项目，分享前端技术和产品实践；接下来，我们会把重点转向 AI 工具、AI 工作流和 AI 落地过程中的真实经验。我们会从实际问题出发，带着问题去做实验、搭工具、验证方法，再把过程中得到的认知和踩过的坑分享出来。
+We often talk about AI agents as if they are going to become a “super assistant”: give it a goal, let it plan, execute, report back, and ideally finish everything in one shot.
 
-过去我们谈 AI Agent，经常会下意识地把它想象成一个“超级助手”：你给它一个目标，它自己规划、执行、反馈，最好还能把所有事情一次性做完。
+But the more I experiment with agents, the less natural that model feels.
 
-但我最近越来越觉得，这可能不是最自然的形态。
+A more natural shape may be closer to a company.
 
-更自然的形态，反而像一家公司。
+Not one all-powerful agent, but a group of agent teammates with different responsibilities: one explores ideas, one turns ideas into PRDs or execution plans, one writes code, one monitors data, one runs growth experiments, and one handles notifications and code review signals.
 
-不是一个无所不能的 Agent，而是一群各有分工的 Agent 同事：有人负责创意，有人负责把想法拆成 PRD，有人负责写代码，有人负责数据监控，有人负责增长实验，有人负责通知和 Code Review。它们不需要一开始就完美，也不需要每个都拥有完整的上下文和无限能力。它们只需要在一个共同的工作流里，围绕同一个项目和实验持续协作。
+They do not need to be perfect from day one. They do not need unlimited context or unlimited capability. They need to work inside a shared workflow around the same projects and experiments.
 
-封面里的“人类负责人 + 动物同事”，只是一个视觉隐喻：我想表达的不是可爱形象本身，而是人和一组 AI 角色一起工作的状态。每个角色都有自己的性格、工具和岗位。它们不是“功能按钮”，更像一个正在长出来的 AI 团队。
+The cover image is a visual metaphor: a human lead working with a group of animal colleagues. The point is not the cuteness of the characters. The point is the working relationship between a human and a set of AI roles, each with its own tools, personality, and job.
 
-这里说的“Agent 公司”，也不是一个已经成熟的概念包装，而是从“一人公司”这个创业实践里长出来的：当一个人或一个很小的团队，想同时做产品、内容、增长、研发、数据和用户支持时，单纯多开几个聊天窗口很快就不够了。你真正需要的是一套能把 AI 分工、上下文、实验、通知和复盘串起来的工作方式。
+The idea of an “agent company” is not just a branding exercise. It comes from a practical one-person company problem: if one person or a very small team wants to cover product, content, growth, engineering, data, and user feedback at the same time, simply opening more chat windows does not scale.
 
-所以这篇文章不是想泛泛介绍“怎么给数字员工起名字”，而是想回答一个更具体的问题：如果我们真的想用 AI 把一人公司的能力放大，最小可行的协作系统应该长什么样？
+What you need is a way to connect AI roles, shared context, experiments, notifications, and review loops into one operating system.
 
-## 从“一个 Agent”到“一群 Agent”
+So this article is not about how to give digital employees nice names. It is about a more concrete question:
 
-单 Agent 的问题在于，它很容易被设计成一个过大的容器。
+If we really want AI to amplify the capability of a one-person company, what should the minimum viable coordination system look like?
 
-你希望它既能理解战略，又能写文案；既能分析数据，又能写代码；既能做增长，又能记住所有历史上下文。结果往往是：提示词越来越长，工具越来越多，流程越来越复杂，最后你也不知道它到底应该负责什么。
+## From One Agent to a Team of Agents
 
-多 Agent 的直觉是反过来的：不要试图把所有能力塞进一个大脑里，而是把工作拆给一组更小、更具体、更容易调教的角色。
+The problem with a single agent is that it easily becomes an oversized container.
 
-比如：
+You want it to understand strategy, write copy, analyze data, write code, do growth, remember all historical context, and plan every step by itself.
 
-- **Spark**：负责创意补充、角度扩展、表达方式发散。
-- **Quest**：把创意细化成 PRD、执行文档或实验计划。
-- **Forge**：负责 AI Coding，把明确的需求变成代码。
-- **Scout**：负责数据监控、日报、周报和异常发现。
-- **通知系统**：把 GitHub Code Review、事件埋点、采集结果、关键提醒推到人面前。
-- **Blaze**：提出增长策略、设计实验、观察反馈，再继续迭代。
+The result is usually predictable: the prompt gets longer, the tools multiply, the workflow becomes more fragile, and you are no longer sure what the agent is actually accountable for.
 
-这听起来像是在“拟人化”AI，但重点其实不是拟人化本身。
+The multi-agent intuition is the opposite:
 
-重点是：当任务变复杂之后，人天然需要组织结构。Agent 也一样。
+Do not put every capability into one brain. Split the work into smaller, more specific, easier-to-train roles.
 
-## Agent 员工不是设计出来的，是工作出来的
+For example:
 
-这里有一个很重要的反直觉点：
+- **Spark**: expands ideas, adds angles, and explores different expressions.
+- **Quest**: turns ideas into PRDs, execution documents, or experiment plans.
+- **Forge**: handles AI coding and turns clear requirements into code.
+- **Scout**: monitors data, produces daily/weekly reports, and detects anomalies.
+- **Notification system**: brings GitHub code reviews, event tracking, collection results, and important reminders to the human.
+- **Blaze**: proposes growth strategies, designs experiments, observes feedback, and keeps iterating.
 
-不要指望一开始就把每个 Agent 的角色定义完整。
+This may sound like anthropomorphizing AI, but that is not the point.
 
-你很难在第一天就知道 Spark 应该怎样补充创意，Quest 应该输出什么粒度的 PRD，Forge 在什么情况下该直接改代码、什么情况下该先追问，Scout 应该每天看哪些指标、周报应该怎么写，Blaze 应该如何把增长策略拆成实验。
+The point is that once work becomes complex, humans naturally need organization. Agents do too.
 
-这些东西不是靠一次提示词设计完成的。
+## Agent Employees Are Shaped Through Work
 
-它们更像真实公司里的岗位：先给一个粗略职责，让它开始做事；然后在每一次实际工作中调整边界、工具、输出格式和协作方式。
+There is one counterintuitive lesson here:
 
-一开始可以很简单：
+Do not expect to fully define every agent role upfront.
 
-- 这个 Agent 负责什么？
-- 它应该读取哪些上下文？
-- 它应该产出什么格式？
-- 什么情况下需要通知人类？
-- 什么情况下可以直接进入下一步？
+On day one, you will not know exactly how Spark should expand ideas, what level of detail Quest should include in a PRD, when Forge should change code directly versus ask a follow-up question, what Scout should monitor every day, or how Blaze should break growth strategy into experiments.
 
-然后让它跑起来。
+These details are not solved by one perfect system prompt.
 
-跑过几次之后，你会自然发现：某些职责太大了，需要拆；某些工具给多了，反而让流程变复杂；某些输出没人看，就应该删掉；某些通知很关键，应该立刻推到人面前。
+They are closer to real company roles. You start with a rough responsibility, let the role do real work, then keep adjusting its boundaries, tools, output format, and collaboration style.
 
-所以我现在更相信一句话：**Agent 员工不是定义出来的，是在工作流里调教出来的。**
+A simple first version only needs to answer:
 
-## 真正难的不是角色，而是协作基础设施
+- What is this agent responsible for?
+- What context should it read?
+- What output format should it produce?
+- When should it notify a human?
+- When can it move directly to the next step?
 
-如果只是给几个 Agent 起名字、写几段 system prompt，其实并不难。
+Then you let it run.
 
-难的是另一件事：当 Agent 变多之后，它们之间怎么协作？
+After a few real tasks, patterns become obvious. Some responsibilities are too broad and need to be split. Some tools create more complexity than value. Some outputs are never read and should be removed. Some notifications are critical and should be pushed immediately.
 
-更具体一点：
+That is why I increasingly believe this:
 
-- 一个 Agent 的输出如何成为另一个 Agent 的输入？
-- 多个 Agent 如何围绕同一个项目共享上下文？
-- 哪些数据应该长期保存，哪些只是临时对话？
-- 人类什么时候介入，什么时候不介入？
-- 通知应该怎样推送，才不会变成噪音？
-- 每个实验的假设、动作、数据和结论如何串起来？
+**Agent employees are not defined into existence. They are trained through workflow.**
 
-如果这些问题没有解决，多 Agent 很快会从“团队”变成“群聊”。大家都在说话，但没有结构，没有状态，也没有真正的推进。
+## The Hard Part Is Not Roles, but Collaboration Infrastructure
 
-所以我觉得，多 Agent 工作流的核心不只是 Agent 本身，而是它们背后的协作基建。
+Giving agents names and writing a few system prompts is not hard.
 
-## 用“项目 + 实验”替代混乱对话
+The hard part is what happens when there are many agents:
 
-我们目前的一个做法，是把事情拆成两个层级：
+- How does one agent’s output become another agent’s input?
+- How do multiple agents share context around the same project?
+- Which data should be stored long-term, and which context is temporary?
+- When should the human intervene, and when should the system continue by itself?
+- How should notifications work so they do not become noise?
+- How do the hypothesis, action, data, and conclusion of each experiment stay connected?
 
-1. **项目**：长期方向，代表我们正在建设或验证的一块东西。
-2. **实验**：围绕某个假设设计的可执行动作，必须能被观察、复盘和迭代。
+If these questions are not solved, a multi-agent system quickly turns from a “team” into a “group chat.” Everyone is talking, but there is no structure, no state, and no real progress.
 
-这比“开一个聊天窗口让 Agent 帮我想想”要稳定得多。
+So the core of a multi-agent workflow is not only the agents themselves. It is the collaboration infrastructure behind them.
 
-一个实验至少应该包含：
+## Replace Messy Conversations with Projects and Experiments
 
-- 假设是什么？
-- 为什么值得验证？
-- 要做什么动作？
-- 谁来执行？
-- 需要哪些输入？
-- 预期观察哪些指标？
-- 什么时候需要人类判断？
-- 结果如何沉淀？
+One structure we use is to split work into two layers:
 
-这样，Agent 的协作就不再依赖某一次对话里的临时上下文，而是依赖一套可流转的工作档案。
+1. **Project**: a long-term direction, representing something we are building or validating.
+2. **Experiment**: a testable hypothesis with concrete actions, observable results, review points, and iteration.
 
-你可以把它理解成一份持续更新的“公司档案”：每个项目、每个实验、每个数据结果、每次复盘都在里面。Spark 看它来补充创意，Quest 看它来拆执行方案，Forge 看它来写代码，Scout 看它来分析数据，Blaze 看它来设计下一轮增长实验，通知系统看它来决定哪些信号应该被推到人面前。
+This is much more stable than opening a chat window and asking an agent to “think about it.”
 
-人类不需要把所有信息重复讲五遍。Agent 也不需要靠猜测来理解事情的前因后果。
+A useful experiment record should include:
 
-## 人类在这个系统里的位置
+- What is the hypothesis?
+- Why is it worth testing?
+- What action should be taken?
+- Who executes it?
+- What inputs are needed?
+- What metrics should be observed?
+- When is human judgment required?
+- How should the result be saved and reviewed?
 
-多 Agent 工作流不是为了把人彻底拿掉。
+With this structure, agent collaboration no longer depends on temporary context inside one conversation. It depends on a shared working record.
 
-恰恰相反，它要求人更清楚地承担几件事：
+You can think of it as a continuously updated company file: every project, every experiment, every data result, and every retrospective lives there.
 
-- 定义方向：什么值得做，什么不值得做。
-- 做关键判断：数据不充分时如何取舍。
-- 设定边界：哪些事情可以自动执行，哪些必须确认。
-- 调整组织：什么时候新增 Agent，什么时候合并职责。
-- 维护品味：最终输出是否符合我们想要的风格和标准。
+Spark uses it to expand ideas. Quest uses it to break work into plans. Forge uses it to write code. Scout uses it to analyze data. Blaze uses it to design the next growth experiment. The notification system uses it to decide which signals need to be brought to the human.
 
-Agent 负责并行执行、信息整理、文档生成、代码实现、数据监控和通知推送。人类负责方向、判断和治理。
+The human does not need to repeat the same context five times. The agents do not need to guess the history behind a task.
 
-这其实更像一个小团队，而不是一个工具箱。
+## The Human Role Becomes Clearer
 
-## 为什么这件事现在变得有意思
+A multi-agent workflow is not about removing the human.
 
-过去，做这样一套系统成本很高。你需要自己搭任务系统、通知系统、权限系统、数据管道和自动化脚本。
+It actually requires the human to take clearer responsibility for a few things:
 
-但现在，Agent 的可用性已经到了一个微妙的阶段：单个 Agent 未必足够可靠到完全自治，但多个小 Agent 在明确边界和稳定上下文下协作，已经可以产生相当可观的生产力。
+- Direction: what is worth doing and what is not.
+- Judgment: how to choose when the data is incomplete.
+- Boundaries: what can be automated and what requires confirmation.
+- Organization: when to add a new agent and when to merge responsibilities.
+- Taste: whether the final output matches the desired style and standard.
 
-它们不需要一开始就像高级员工。
+Agents execute in parallel, organize information, draft documents, implement code, monitor data, and push notifications.
 
-更现实的比喻是：它们像一批 junior 同事。你需要给它们清楚的任务、合适的工具、可复用的上下文和及时的反馈。随着工作流不断沉淀，它们会越来越像真正的团队成员。
+Humans handle direction, judgment, and governance.
 
-这也是为什么我觉得“Agent 公司”这个概念会越来越流行。
+This feels more like a small team than a toolbox.
 
-它不是因为大家突然喜欢给 AI 起名字，而是因为当 AI 能力从单点工具变成可协作的执行单元之后，我们自然需要一种新的组织方式。
+## Why This Is Becoming Interesting Now
 
-## 我们真正要建设的东西
+In the past, building a system like this was expensive. You had to build your own task system, notification system, permission layer, data pipeline, and automation scripts.
 
-如果用一句话总结：
+Now agents have reached an interesting stage: a single agent may not be reliable enough for full autonomy, but multiple small agents working within clear boundaries and stable context can already produce meaningful leverage.
 
-**我们不是在做一个更强的聊天机器人，而是在做一套让 Agent 同事可以围绕项目和实验持续协作的工作流系统。**
+They do not need to behave like senior employees from the start.
 
-这个系统里，最重要的不是某个 Agent 有多聪明，而是：
+A more realistic comparison is that they are junior teammates. You need to give them clear tasks, the right tools, reusable context, and timely feedback. As the workflow accumulates, they become more like real team members.
 
-- 它是否知道自己该做什么；
-- 它是否能拿到正确上下文；
-- 它是否能把结果交给下一个角色；
-- 它是否能在关键节点通知人类；
-- 它是否能把实验、数据和复盘沉淀下来。
+This is why I think “agent company” will become a useful mental model.
 
-当这些基础设施跑起来之后，新增一个 Agent 就不再是“多接一个 chatbot”，而是给公司招了一个新同事。
+Not because people suddenly enjoy naming AIs, but because once AI moves from single-point tools to collaborative execution units, we naturally need a new organizational structure.
 
-它可以有名字，有角色，有工具，有成长路径，也有协作关系。
+## What We Are Really Building
 
-这件事最有意思的地方也在这里：
+In one sentence:
 
-未来的 AI 产品，可能不只是一个入口、一个助手、一个 Copilot。
+**We are not building a stronger chatbot. We are building a workflow system where agent teammates can continuously collaborate around projects and experiments.**
 
-它可能是一家公司。
+In that system, the most important questions are not whether one agent is smart enough, but:
 
-而我们要做的，是先把这家公司最小可行地跑起来。
+- Does it know what it should do?
+- Can it access the right context?
+- Can it hand results to the next role?
+- Can it notify a human at the right moment?
+- Can it save experiments, data, and reviews into reusable memory?
 
-## 如果你也在搭自己的 AI 工作流
+Once that infrastructure works, adding a new agent is no longer “connecting another chatbot.” It is closer to hiring a new teammate into the company.
 
-我们现在正在做的，就是一次“一人公司”的创业实验：用一组 Agent 和自动化工作流，尽可能把产品、研发、内容、增长、数据和用户反馈串成一个可以持续迭代的系统。
+It can have a name, a role, tools, a growth path, and collaboration relationships.
 
-我们是一支有丰富工程和创业经验的团队，核心成员长期做产品和全栈开发，也一直在 AI 领域做各种有趣的尝试。我们关心的不是把 AI 当成演示，而是怎么更快地把想法落到真实产品里，怎么让多个 Agent 协作得更顺畅，以及需要什么样的工具、方法和流程，才能让 AI 真正进入日常工作。
+That is the interesting part.
 
-所以如果你正在遇到和 AI 相关的问题，不管是：
+The future AI product may not be just one entry point, one assistant, or one copilot.
 
-- 想把某个工作流程自动化；
-- 不知道该选哪个模型或工具；
-- 安装、部署、使用过程中卡住了；
-- 想给自己的业务定制一套 AI 工作流；
-- 或者只是对 Agent、AI Coding、一人公司这些方向有疑问；
+It may look like a company.
 
-都可以关注我们，或者直接私信告诉我们。
+And the first step is to get the smallest version of that company running.
 
-我们会从真实问题里选题，做实验、搭工具、写教程，也把踩坑和结果持续分享出来。比起单纯讲概念，我更希望这个账号变成一个入口：你提出问题，我们用 AI 和工程方法一起把它拆开、验证、解决。
+## If You Are Building Your Own AI Workflow
+
+What we are doing now is a one-person company experiment: using a group of agents and automation workflows to connect product, engineering, content, growth, data, and user feedback into a system that can keep iterating.
+
+We are a team with deep engineering and startup experience. Many of us have spent years building products and full-stack systems, and we are continuously experimenting with AI in practical settings.
+
+We care less about turning AI into demos, and more about questions like:
+
+- How can ideas be turned into real products faster?
+- How can multiple agents collaborate more smoothly?
+- What tools, methods, and workflows make AI useful in daily work?
+
+If you are stuck on anything related to AI workflows, model selection, installation, deployment, AI coding, business automation, or multi-agent collaboration, feel free to reach out.
+
+We want to start from real problems, run experiments, build tools, write practical tutorials, and share the lessons and mistakes along the way.
+
+Instead of only writing about concepts, we want this account to become an entry point: you bring the problem, and we use AI plus engineering methods to break it down, test it, and solve it.
