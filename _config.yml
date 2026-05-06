@@ -1,0 +1,7 @@
+title: COLAND-G Notes
+description: AI tools, workflows, and experiments from real product building.
+lang: zh-CN
+timezone: Asia/Shanghai
+theme: minima
+plugins:
+  - jekyll-feed
