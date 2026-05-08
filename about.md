@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-我们是一支有丰富工程和创业经验的团队，长期关注如何把 AI 真正落到产品、研发、内容、增长和数据工作流里。
+We are a team with deep engineering and startup experience, focused on turning AI into practical workflows for products, software development, content, growth, and data work.
 
-如果你正在遇到 AI 工作流、模型选择、工具安装、AI Coding 或业务自动化相关的问题，欢迎通过我们的社媒账号联系。
+If you are working through AI workflow design, model selection, tool setup, AI coding, or business automation problems, feel free to reach out through our social channels.

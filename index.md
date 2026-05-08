@@ -3,6 +3,6 @@ layout: home
 title: COLAND-G Notes
 ---
 
-这里记录我们在 AI 工具、AI 工作流、多 Agent 协作和产品落地中的实验、经验与踩坑。
+Notes from our experiments with AI tools, AI workflows, multi-agent collaboration, and product implementation.
 
-我们会从实际问题出发，带着问题做实验、搭工具、验证方法，再把过程中的认知沉淀下来。
+We start from real problems, run practical experiments, build tools, validate methods, and turn what we learn into reusable operating notes.
