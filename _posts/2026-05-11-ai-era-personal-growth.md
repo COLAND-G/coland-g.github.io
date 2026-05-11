@@ -7,7 +7,7 @@ categories: [AI, Learning, Personal-Growth]
 
 > AI makes answers cheap. Personal growth does not come from receiving better answers. It comes from turning real problems into experiments, results, reflection, and reusable know-how.
 
-![From answers to know-how](/assets/images/ai-era-personal-growth-cover.svg)
+![From answers to know-how](/assets/images/9f76d414-c61e-4999-bb37-3b4e5c943b14.png)
 
 AI is changing the environment for learning.
 
